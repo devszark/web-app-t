@@ -1,0 +1,32 @@
+.toolbar {
+    padding: 0px 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: blue;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+.toolbar a {
+    display: flex;
+    align-items: center;
+    margin: 0;
+    color: white;
+    font-weight: normal;
+}
+
+.toolbar a:hover {
+    color: lightblue;
+}
+
+.spacer {
+    flex-grow: 1;
+    text-align: center;
+}
+
+.toolbar img {
+    margin: 0 10px;
+}

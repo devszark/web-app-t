@@ -7,6 +7,7 @@ import { SearchListComponent } from './feature/search-list/search-list.component
 import { ToolbarComponent } from './feature/toolbar/toolbar.component';
 import { PreviewComponent } from './feature/preview/preview.component';
 import { CustomizeComponent } from './feature/customize/customize.component';
+import { FooterComponent } from './feature/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { CustomizeComponent } from './feature/customize/customize.component';
     SearchListComponent,
     ToolbarComponent,
     PreviewComponent,
-    CustomizeComponent
+    CustomizeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule

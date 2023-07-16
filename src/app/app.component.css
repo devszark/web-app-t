@@ -1,45 +1,13 @@
-.toolbar {
-    padding: 0px 20px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: blue;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.8em;
-    font-weight: bold;
 
-}
-
-.toolbar a {
-    display: flex;
-    align-items: center;
-    margin: 0;
-    color: white;
-    font-weight: normal;
-}
-
-.toolbar a:hover {
-    color: lightblue;
-}
-
-.spacer {
-    flex-grow: 1;
-    text-align: center;
-}
-
-.toolbar img {
-    margin: 0 10px;
-}
 
 .content {
     /* border: solid 2px red; */
     display: flex;
     flex-direction: row;
-    /* margin: 20px 20px; */
     padding: 6px;
-    /* max-width: 960px; */
     align-items: left;
+    max-width: 1400px;
+    /* justify-content: center; */
 }
 
 .column {
@@ -48,7 +16,7 @@
     padding: 4px;
     display: flex;
     flex-direction: column;
-    flex: 1
+    flex: 1;
 }
 
 .form {
@@ -71,13 +39,3 @@
     flex: 3;
 }
 
-.footer {
-    padding: 0px 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    background-color: blue;
-    color: white;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.8em;
-}
