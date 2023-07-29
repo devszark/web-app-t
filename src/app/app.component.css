@@ -1,17 +1,16 @@
 
 
 .content {
-    /* border: solid 2px red; */
     display: flex;
     flex-direction: row;
     padding: 6px;
     align-items: left;
     max-width: 1400px;
-    /* justify-content: center; */
+    margin: auto;
 }
 
 .column {
-    border: solid 2px white;
+    border: solid 2px red;
     margin: 6px;
     padding: 4px;
     display: flex;
