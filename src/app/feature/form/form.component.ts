@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -7,10 +7,11 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent {
+  @ViewChild('f') addCarForm: NgForm;
 
-  onSubmit(form: NgForm) {
+  onSubmit() {
     console.log("Submit pressed!");
-    console.log(form.value);
+    console.log(this.addCarForm.value);
   }
 
   onReset(){
