@@ -8,6 +8,7 @@ import { ToolbarComponent } from './feature/toolbar/toolbar.component';
 import { PreviewComponent } from './feature/preview/preview.component';
 import { CustomizeComponent } from './feature/customize/customize.component';
 import { FooterComponent } from './feature/footer/footer.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FooterComponent } from './feature/footer/footer.component';
     FooterComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

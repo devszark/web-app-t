@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -7,4 +8,12 @@ import { Component } from '@angular/core';
 })
 export class FormComponent {
 
+  onSubmit(form: NgForm) {
+    console.log("Submit pressed!");
+    console.log(form.value);
+  }
+
+  onReset(){
+    console.log("Reset - Clear pressed!");
+  }
 }

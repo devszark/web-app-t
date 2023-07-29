@@ -1,10 +1,23 @@
 <div>
     <h3>Form</h3>
-    <p>Velit reprehenderit irure nisi esse. Et dolore dolore amet nulla et dolore. Laborum magna duis pariatur minim
-        fugiat
-        commodo id nisi aute ullamco elit sint adipisicing fugiat. Mollit in dolor eu et est consequat ea cillum do qui.
-        Proident qui est quis veniam nisi do dolor fugiat proident dolor commodo culpa. Excepteur eiusmod ad in
-        excepteur dolor
-        in ut tempor dolor.
-    </p>
+    <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+        <div>
+            <label for="vendor">vendor</label>
+            <input type="text" ngModel name="vendor">
+        </div>
+        <div>
+            <label for="model">model</label>
+            <input type="text" ngModel name="model">
+        </div>
+        <div>
+            <label for="year">year</label>
+            <select id="prodYear" ngModel name="year">
+                <option value="2023">2023</option>
+                <option value="2022">2022</option>
+                <option value="2021">2021</option>
+            </select>
+        </div>
+        <button type="reset" (click)="onReset()">clear</button>
+        <button type="submit">add</button>
+    </form>
 </div>
