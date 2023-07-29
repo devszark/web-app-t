@@ -3,11 +3,11 @@
     <form (ngSubmit)="onSubmit()" #f="ngForm">
         <div>
             <label for="vendor">vendor</label>
-            <input type="text" ngModel name="vendor">
+            <input type="text" ngModel name="vendor" required>
         </div>
         <div>
             <label for="model">model</label>
-            <input type="text" ngModel name="model">
+            <input type="text" ngModel name="model" required>
         </div>
         <div>
             <label for="year">year</label>
@@ -18,6 +18,6 @@
             </select>
         </div>
         <button type="reset" (click)="onReset()">clear</button>
-        <button type="submit">add</button>
+        <button type="submit" [disabled]="!f.valid">add</button>
     </form>
 </div>
