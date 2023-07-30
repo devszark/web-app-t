@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { FormControl, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -7,9 +7,13 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./form.component.css']
 })
 export class FormComponent {
-  newCar: FormGroup;
+  newCarForm: FormGroup;
 
   ngOnInit(){
-    this.newCar = new FormGroup({});
+    this.newCarForm = new FormGroup({
+      'vendor': new FormControl(null),
+      'model': new FormControl(null),
+      'year': new FormControl(2023)
+    });
   }
 }
