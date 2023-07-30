@@ -1,23 +1,30 @@
 <div>
     <h3>Form</h3>
     <form (ngSubmit)="onSubmit()" #f="ngForm">
-        <div>
-            <label for="vendor">vendor</label>
-            <input type="text" ngModel name="vendor" required>
+        <div class="fields" ngModelGroup="car" #userData="ngModelGroup">
+            <p>Data valid: {{userData.valid}}</p>
+            <div>
+                <label for="vendor">vendor</label>
+                <input type="text" ngModel name="vendor" required>
+            </div>
+            <div>
+                <label for="model">model</label>
+                <input type="text" ngModel name="model" required>
+            </div>
+
+            <div>
+                <label for="year">year</label>
+                <select id="prodYear" ngModel name="year">
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                </select>
+            </div>
         </div>
-        <div>
-            <label for="model">model</label>
-            <input type="text" ngModel name="model" required>
+        <div class="buttons">
+            <button class="btn" type="reset" (click)="onReset()">clear</button>
+            <button class="btn" type="submit" [disabled]="!f.valid">add</button>
         </div>
-        <div>
-            <label for="year">year</label>
-            <select id="prodYear" ngModel name="year">
-                <option value="2023">2023</option>
-                <option value="2022">2022</option>
-                <option value="2021">2021</option>
-            </select>
-        </div>
-        <button type="reset" (click)="onReset()">clear</button>
-        <button type="submit" [disabled]="!f.valid">add</button>
+        <p *ngIf="!userData.valid && userData.touched">User data is invalid!</p>
     </form>
 </div>

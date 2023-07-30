@@ -12,6 +12,8 @@ export class FormComponent {
   onSubmit() {
     console.log("Submit pressed!");
     console.log(this.addCarForm.valid);
+    console.log(this.addCarForm);
+
   }
 
   onReset(){
