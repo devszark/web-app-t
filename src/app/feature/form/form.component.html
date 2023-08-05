@@ -13,7 +13,12 @@
                 <label for="model">model</label>
                 <input type="text" name="model" formControlName="model">
                 <span class="message" *ngIf="newCarForm.get('model')?.invalid && newCarForm.get('model')?.touched">
-                    Enter valid model!</span>
+                    Enter valid model!
+                    <span *ngIf="newCarForm.get('model').errors['nameIsForbidden']">
+                        O nie, tylko nie Multipla :)
+                    </span>
+                </span>
+                    
             </div>
 
             <div>

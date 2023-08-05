@@ -8,16 +8,25 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class FormComponent {
   newCarForm: FormGroup;
+  forbiddenModels= ['Multipla'];
 
   ngOnInit(){
     this.newCarForm = new FormGroup({
       'vendor': new FormControl(null, [Validators.required, Validators.maxLength(20)]),
-      'model': new FormControl(null, Validators.required),
+      'model': new FormControl(null, [Validators.required, this.forbiddenCarModels.bind(this)]),
       'year': new FormControl(2023)
     });
   }
 
   onSubmit(){
-    console.log(this.newCarForm.get('vendor'));
+    console.log(this.newCarForm);
   }
+
+  forbiddenCarModels(control: FormControl): {[s: string]: boolean}|null {
+    if (this.forbiddenModels.indexOf(control.value) !== -1){
+      return {'nameIsForbidden': true}
+    }
+    return null;
+  }
+
 }
