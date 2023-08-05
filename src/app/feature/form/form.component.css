@@ -10,3 +10,13 @@ form{
 .fields{
     margin: 10px;
 }
+
+input.ng-invalid.ng-touched {
+    background-color: yellow;
+}
+
+.message {
+    font-size: 75%;
+    color: red;
+    margin-left: 5px;
+}

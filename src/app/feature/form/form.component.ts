@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-form',
@@ -11,9 +11,13 @@ export class FormComponent {
 
   ngOnInit(){
     this.newCarForm = new FormGroup({
-      'vendor': new FormControl(null),
-      'model': new FormControl(null),
+      'vendor': new FormControl(null, [Validators.required, Validators.maxLength(20)]),
+      'model': new FormControl(null, Validators.required),
       'year': new FormControl(2023)
     });
+  }
+
+  onSubmit(){
+    console.log(this.newCarForm.get('vendor'));
   }
 }

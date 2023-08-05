@@ -1,14 +1,19 @@
 <div>
     <h3>Form</h3>
-    <form [formGroup]="newCarForm">
+    <form [formGroup]="newCarForm" (ngSubmit)="onSubmit()">
         <div class="fields">
             <div>
                 <label for="vendor">vendor</label>
-                <input type="text" name="vendor" required formControlName="vendor">
+                <input type="text" name="vendor" formControlName="vendor">
+                <span class="message"
+                    *ngIf="newCarForm.get('vendor')?.invalid && newCarForm.get('vendor')?.touched">
+                    Enter valid vendor!</span>
             </div>
             <div>
                 <label for="model">model</label>
-                <input type="text" name="model" required formControlName="model">
+                <input type="text" name="model" formControlName="model">
+                <span class="message" *ngIf="newCarForm.get('model')?.invalid && newCarForm.get('model')?.touched">
+                    Enter valid model!</span>
             </div>
 
             <div>
